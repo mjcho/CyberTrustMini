@@ -1,0 +1,86 @@
+---
+title       : Trustworthiness of Information across Information Domains
+subtitle    : The "Factiness" of Information
+author      : MJ Cho
+job         : Cyber Social Mini Conference
+logo        : stanford.gif
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+```{r echo=FALSE}
+# code chunk to load libraries and data
+library(ggplot2)
+library(gridExtra)
+load("statsList.rda")
+load("topicsDF.rda")
+load("topicAndTerm.rda")
+```
+
+## Information Trustworthiness
+>- 1. Database and machine learning
+>- 2. Computational journalism 
+
+---
+
+## Cyber Social Project
+>- 1. Consumer-side, moment-by-moment
+
+---
+
+## Factiness
+>- 1. Duke's ClaimBuster API
+
+---
+
+## Factiness by Behavioral Categories
+```{r echo=FALSE,warning=FALSE,fig.align='center',fig.width=14}
+c1 <- ggplot(statsList[[1]], aes(x = category, y = avg, fill = category)) + 
+  geom_bar(position = position_dodge(), stat = "identity",
+           width = .8) +
+  geom_errorbar(aes(ymin = lowerCI, ymax = upperCI),
+                width = .1, position = position_dodge(.9)) +
+  ggtitle("Mean Factiness Score by Behavioral Category, Phone") + 
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank())
+c2 <- ggplot(statsList[[2]], aes(x = category, y = avg, fill = category)) + 
+  geom_bar(position = position_dodge(), stat = "identity",
+           width = .8) +
+  geom_errorbar(aes(ymin = lowerCI, ymax = upperCI),
+                width = .1, position = position_dodge(.9)) +
+  ggtitle("Mean Factiness Score by Behavioral Category, Laptop") + 
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank())
+grid.arrange(c1, c2, nrow = 1)
+```
+
+---
+
+## Topic Modeling and Trend of the Mean Factiness Score: Phone
+```{r echo=FALSE,warning=FALSE,fig.align='center',fig.width=10}
+ph1 <- ggplot(phTopicsDF, aes(hour, fill = phAll.term[phTopics])) + 
+  geom_density(position = "stack") + 
+  scale_fill_discrete(name = "Topic Categories") + 
+  ggtitle("LDA Topic Modelling: Phone")
+ph2 <- ggplot(phTopicsDF, aes(hour, score)) + 
+  geom_smooth(method = "loess", span = 0.4)
+grid.arrange(ph1, ph2, ncol = 1)
+```
+
+---
+
+## Topic Modeling and Trend of the Mean Factiness Score: Laptop
+```{r echo=FALSE,warning=FALSE,fig.align='center',fig.width=10}
+la1 <- ggplot(laTopicsDF, aes(hour, fill = laAll.term[laTopics])) + 
+  geom_density(position = "stack") + 
+  scale_fill_discrete(name = "Topic Categories") + 
+  ggtitle("LDA Topic Modelling: Laptop")
+la2 <- ggplot(laTopicsDF, aes(hour, score)) + 
+  geom_smooth(method = "loess", span = 0.4)
+grid.arrange(la1, la2, ncol = 1)
+```
+
