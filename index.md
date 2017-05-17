@@ -15,31 +15,47 @@ knit        : slidify::knit2slides
 
 
 ## Information Trustworthiness
->- 1. Database and machine learning
+>- An open research question!
+>- 1. Database, machine learning, and natural language understanding
+  - data/knowledge fusion
+  - data veracity and source credibility
 >- 2. Computational journalism 
+  - automated fact-checking: also an engineering question?
+  - combining currently available tools vs. "fundamental breakthroughs in multiple fronts"
 
 ---
 
-## Cyber Social Project
->- 1. Consumer-side, moment-by-moment
+## Factiness, Truthiness
+>- 1. True/False value of a claim is importent, but...
+  - It's not only about fact; it's also about the possiblity of having some "facts"
+  - Nathan Jurgenson: "The facts of Obama’s birthplace mattered less..."
+>- 2. Facts vs. "facty" info
+  - "Factiness is the taste for the feel and aesthetic of 'facts'" 
+  - We like to be informed, like, super informed: "facty" info is attractive whether it true or not
 
 ---
 
-## Factiness
->- 1. Duke's ClaimBuster API
+## Cyber Social Project and Information Trustworthiness
+>- 1. Consumer-side media diet
+  - Info presented vs. Info consumed
+>- 2. Moment-by-moment granularity
+  - Naturally-occurring data
+>- 3. Duke Database Research Group's ClaimBuster
+  - SVM trained on presidential debate texts
+  - Has a REST API
 
 ---
 
 ## Factiness by Behavioral Categories
-<img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ---
 
 ## Topic Modeling and Trend of the Mean Factiness Score: Phone
-<img src="assets/fig/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 ---
 
 ## Topic Modeling and Trend of the Mean Factiness Score: Laptop
-<img src="assets/fig/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
