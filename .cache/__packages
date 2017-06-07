@@ -10,3 +10,5 @@ RWekajars
 data.table
 slidify
 dplyr
+stringi
+LDAvis

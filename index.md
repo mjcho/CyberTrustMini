@@ -10,6 +10,7 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+output      : pdf
 ---
 
 
@@ -47,15 +48,38 @@ knit        : slidify::knit2slides
 ---
 
 ## Factiness by Behavioral Categories
-<img src="figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ---
 
 ## Topic Modeling and Trend of the Mean Factiness Score: Phone
-<img src="figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 ---
 
 ## Topic Modeling and Trend of the Mean Factiness Score: Laptop
-<img src="figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
+---
+
+## Trend of the Mean Factiness Score, 10-11 am: Phone
+
+```
+## Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
+```
+
+```
+## Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE, : arguments imply differing number of rows: 0, 237
+```
+
+---
+
+## Trend of the Mean Factiness Score, 10-11 am: Laptop
+
+```
+## Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
+```
+
+```
+## Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE, : arguments imply differing number of rows: 0, 102
+```
