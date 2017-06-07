@@ -127,3 +127,22 @@ la2 <- ggplot(laTopicsDF.hr, aes(ti, score)) +
   geom_smooth(method = "loess", span = 0.1)
 grid.arrange(la1, la2, ncol = 1)
 ```
+
+---
+
+## Within-individual Statistical Analysis
+```{r echo=FALSE,warning=FALSE}
+load("allDev.rda")
+md <- lm(meanScore ~ category, allDev)
+mdS <- capture.output(summary(md))
+```
+
+```{r}
+mdS[10:23]
+
+```
+
+
+
+
+
