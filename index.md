@@ -63,23 +63,9 @@ output      : pdf
 ---
 
 ## Trend of the Mean Factiness Score, 10-11 am: Phone
-
-```
-## Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
-```
-
-```
-## Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE, : arguments imply differing number of rows: 0, 237
-```
+<img src="assets/fig/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 ---
 
 ## Trend of the Mean Factiness Score, 10-11 am: Laptop
-
-```
-## Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
-```
-
-```
-## Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE, : arguments imply differing number of rows: 0, 102
-```
+<img src="assets/fig/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />

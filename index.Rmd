@@ -106,12 +106,11 @@ grid.arrange(la1, la2, ncol = 1)
 
 ## Trend of the Mean Factiness Score, 10-11 am: Phone
 ```{r echo=FALSE,warning=FALSE,fig.align='center',fig.width=10}
-phTopicsDF.hr <- phTopicsDF[ph.timeInt, ]
-ph1 <- ggplot(phTopicsDF.hr, aes(time, fill = phAll.term[phTopics[ph.timeInt]])) + 
+ph1 <- ggplot(phTopicsDF.hr, aes(ti, fill = phAll.term[phTopics[ph.timeInt]])) + 
   geom_density(position = "stack") + 
   scale_fill_discrete(name = "Topic Categories") + 
   ggtitle("LDA Topic Modelling: phone")
-ph2 <- ggplot(phTopicsDF.hr, aes(time, score)) + 
+ph2 <- ggplot(phTopicsDF.hr, aes(ti, score)) + 
   geom_smooth(method = "loess", span = 0.1)
 grid.arrange(ph1, ph2, ncol = 1)
 ```
@@ -120,11 +119,11 @@ grid.arrange(ph1, ph2, ncol = 1)
 
 ## Trend of the Mean Factiness Score, 10-11 am: Laptop
 ```{r echo=FALSE,warning=FALSE,fig.align='center',fig.width=10}
-laTopicsDF.hr <- laTopicsDF[la.timeInt, ]
-la1 <- ggplot(laTopicsDF.hr, aes(time, fill = laAll.term[laTopics[la.timeInt]])) + 
+la1 <- ggplot(laTopicsDF.hr, aes(ti, fill = laAll.term[laTopics[la.timeInt]])) + 
   geom_density(position = "stack") + 
   scale_fill_discrete(name = "Topic Categories") + 
   ggtitle("LDA Topic Modelling: laptop")
-la2 <- ggplot(laTopicsDF.hr, aes(time, score)) + 
+la2 <- ggplot(laTopicsDF.hr, aes(ti, score)) + 
   geom_smooth(method = "loess", span = 0.1)
 grid.arrange(la1, la2, ncol = 1)
+```
